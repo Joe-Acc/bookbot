@@ -1,4 +1,5 @@
 from stats import word_count, character_count
+import sys
 
 def get_file_text(file_path):
     with open(file_path) as file:
@@ -21,11 +22,15 @@ def formatted_print(file_path, num_words, character_dict):
 
 
 def main():
-    file_path = "./books/frankenstein.txt"
-    text = get_file_text(file_path)
-    num_words = word_count(text)
-    character_dict = character_count(text)
+    # if no file path has been provided returns the following message
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+    else:
+        file_path = sys.argv[1]
+        text = get_file_text(file_path)
+        num_words = word_count(text)
+        character_dict = character_count(text)
 
-    formatted_print(file_path, num_words, character_dict)
+        formatted_print(file_path, num_words, character_dict)
 
 main()
