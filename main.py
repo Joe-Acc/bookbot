@@ -15,7 +15,7 @@ def main():
     text = get_file_text(file_path)
     word_count = wordcount(text)
 
-    message = f"{word_count} words found in document"
+    message = f"{word_count} words found in the document"
 
     print(message)
 
