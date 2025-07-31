@@ -25,5 +25,5 @@ def character_count(text):
             else:
                 counter[character] = 1
 
-    #returns the dictionary with the count of each character 
+    #returns the dictionary with the count of each character
     return counter
