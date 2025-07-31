@@ -25,6 +25,7 @@ def main():
     # if no file path has been provided returns the following message
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     else:
         file_path = sys.argv[1]
         text = get_file_text(file_path)
